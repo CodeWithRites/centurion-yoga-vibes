@@ -1,5 +1,5 @@
 import centurionLogo from "../assets/images/CenturionYoga.png";
-import cutmLogo from "../assets/images/cutm.jpg";
+import cutmLogo from "../assets/images/cutmlogo.png";
 export default function About() {
   return (
     <>
