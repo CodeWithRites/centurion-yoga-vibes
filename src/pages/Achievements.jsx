@@ -1,14 +1,14 @@
 import "../styles/Achievements.css";
 import { Link } from "react-router-dom";
 
-/* ✅ IMAGE IMPORTS (VERY IMPORTANT) */
-import achieve1 from "../assets/images/achieve1.jpg";
-import achieve2 from "../assets/images/achieve2.jpg";
-import achieve3 from "../assets/images/achieve3.jpg";
-import achieve4 from "../assets/images/achieve4.jpg";
+/* ✅ IMPORT IMAGES (MANDATORY FOR VITE BUILD) */
+import achieve1 from "../assets/images/CenturionYoga.png";
+import achieve2 from "../assets/images/Yoga1.png";
+import achieve3 from "../assets/images/meditation.png";
+import achieve4 from "../assets/images/Yoga2.png";
 import achievementHero from "../assets/images/Achievement.png";
 
-/* ✅ STATIC MILESTONE IMAGES */
+/* 🔒 STATIC MILESTONE IMAGES */
 const MILESTONES = [
   { id: 1, title: "Centurion Yoga Expo", image: achieve1 },
   { id: 2, title: "University Wellness Camp", image: achieve2 },
@@ -23,7 +23,10 @@ export default function Achievements() {
       <section
         className="mental-hero"
         style={{
-          backgroundImage: `linear-gradient(rgba(15,47,36,0.65), rgba(15,47,36,0.65)), url(${achievementHero})`,
+          backgroundImage: `linear-gradient(
+            rgba(15,47,36,0.65),
+            rgba(15,47,36,0.65)
+          ), url(${achievementHero})`,
         }}
       >
         <div className="overlay">
@@ -69,47 +72,6 @@ export default function Achievements() {
         </div>
       </section>
 
-      {/* ================= JOURNEY TIMELINE ================= */}
-      <section className="achievement-timeline">
-        <h2>Our Journey</h2>
-        <div className="timeline">
-          <div className="timeline-item">Started with small campus sessions</div>
-          <div className="timeline-item">Expanded to university wellness programs</div>
-          <div className="timeline-item">Hosted yoga expos & public workshops</div>
-          <div className="timeline-item">Built a community-driven wellness movement</div>
-        </div>
-      </section>
-
-      {/* ================= RECOGNITION ================= */}
-      <section className="achievement-recognition">
-        <h2>Recognition & Collaboration</h2>
-        <div className="recognition-grid">
-          <div className="recognition-card">🏫 University Collaborations</div>
-          <div className="recognition-card">🧘 Yoga & Meditation Events</div>
-          <div className="recognition-card">🌿 Community Health Drives</div>
-          <div className="recognition-card">📜 Certified Yogic Practices</div>
-        </div>
-      </section>
-
-      {/* ================= TESTIMONIALS ================= */}
-      <section className="achievement-testimonials">
-        <h2>What People Say</h2>
-        <div className="testimonial-grid">
-          <div className="testimonial-card">
-            “This yoga journey changed my mental clarity and discipline.”
-            <span>– Student</span>
-          </div>
-          <div className="testimonial-card">
-            “Authentic guidance rooted in true yogic values.”
-            <span>– Faculty Member</span>
-          </div>
-          <div className="testimonial-card">
-            “A positive impact on both body and mind.”
-            <span>– Wellness Participant</span>
-          </div>
-        </div>
-      </section>
-
       {/* ================= CTA ================= */}
       <section className="achievement-cta">
         <h2>Be Part of the Journey</h2>
@@ -120,7 +82,7 @@ export default function Achievements() {
         <div className="cta-buttons">
           <Link to="/contact" className="btn primary">Contact Us</Link>
           <a
-            href="https://chat.whatsapp.com/KrJsHe12Ga5CSDD1N5az4R?mode=gi_t"
+            href="https://chat.whatsapp.com/KrJsHe12Ga5CSDD1N5az4R"
             target="_blank"
             rel="noopener noreferrer"
             className="btn secondary"

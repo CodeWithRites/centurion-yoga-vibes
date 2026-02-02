@@ -1,13 +1,19 @@
+import poseImage from "../assets/images/pose.png";
+import gyana from "../assets/images/gyana.jpeg";
+import banita from "../assets/images/banita.jpeg";
+import priyanshu from "../assets/images/priyanshu.jpeg";
+import dwarika from "../assets/images/dwarika.jpeg";
+import ritesh from "../assets/images/ritesh.jpg";
+import bishnu from "../assets/images/bishnu.jpeg";
+
 export default function Home() {
   return (
     <main className="home-page">
-
       {/* ================= HERO ================= */}
       <section className="hero">
-
         {/* SIDE IMAGES (DESKTOP ONLY) */}
         <img
-          src="/src/assets/images/pose.png"
+          src={poseImage}
           alt="Yoga Pose"
           className="hero-side left desktop-only"
         />
@@ -22,7 +28,7 @@ export default function Home() {
 
           {/* MOBILE HERO IMAGE */}
           <img
-            src="/src/assets/images/pose.png"
+            src={poseImage}
             alt="Yoga Pose"
             className="hero-mobile-image mobile-only"
           />
@@ -36,7 +42,7 @@ export default function Home() {
         </div>
 
         <img
-          src="/src/assets/images/pose.png"
+          src={poseImage}
           alt="Yoga Pose"
           className="hero-side right desktop-only"
         />
@@ -67,53 +73,21 @@ export default function Home() {
       </section>
 
       {/* ================= TEAM ================= */}
-     {/* ================= TEAM ================= */}
-<section className="team">
-  <h2>Our Yoga & Media Team</h2>
+      <section className="team">
+        <h2>Our Yoga & Media Team</h2>
 
-  <div className="team-grid">
-    <TeamCard
-      name="Gyanendra Kumar Mishra"
-      role="Yoga Trainer"
-      image="/src/assets/images/gyana.jpeg"
-    />
-
-    <TeamCard
-      name="Banita Sahoo"
-      role="Assistant Yoga Trainer"
-      image="/src/assets/images/banita.jpeg"
-    />
-
-    <TeamCard
-      name="Priyanshu Pradhan"
-      role="Assistant Yoga Trainer"
-      image="/src/assets/images/priyanshu.jpeg"
-    />
-
-    <TeamCard
-      name="Dwarikanath Satpathy"
-      role="Assistant Yoga Trainer"
-      image="/src/assets/images/dwarika.jpeg"
-    />
-
-    <TeamCard
-      name="Ritesh Gouda"
-      role="Media & IT Department"
-      image="/src/assets/images/ritesh.jpg"
-    />
-
-    <TeamCard
-      name="Bishnu Prasad Sahoo"
-      role="Media & IT Department"
-      image="/src/assets/images/bishnu.jpeg"
-    />
-  </div>
-</section>
-
+        <div className="team-grid">
+          <TeamCard name="Gyanendra Kumar Mishra" role="Yoga Trainer" image={gyana} />
+          <TeamCard name="Banita Sahoo" role="Assistant Yoga Trainer" image={banita} />
+          <TeamCard name="Priyanshu Pradhan" role="Assistant Yoga Trainer" image={priyanshu} />
+          <TeamCard name="Dwarikanath Satpathy" role="Assistant Yoga Trainer" image={dwarika} />
+          <TeamCard name="Ritesh Gouda" role="Media & IT Department" image={ritesh} />
+          <TeamCard name="Bishnu Prasad Sahoo" role="Media & IT Department" image={bishnu} />
+        </div>
+      </section>
     </main>
   );
 }
-
 
 /* ================= TEAM CARD ================= */
 function TeamCard({ name, role, image }) {
