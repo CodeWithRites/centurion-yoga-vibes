@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from "../assets/images/CenturionYoga.png";
 
 export default function Footer() {
   return (
@@ -8,9 +9,13 @@ export default function Footer() {
         {/* BRAND */}
         <div className="footer-box">
           <div className="footer-brand">
-            <img src="src/assets/images/CenturionYoga.png" alt="CENTURION YOGA VIBEs Logo" />
-            <h5>CENTURION YOGA VIBES </h5>
+            <img
+              src={logo}
+              alt="CENTURION YOGA VIBES Logo"
+            />
+            <h5>CENTURION YOGA VIBES</h5>
           </div>
+
           <p className="footer-text">
             Yoga for a Balanced Life.<br />
             Empowering body, mind & soul through traditional yoga practices.
@@ -44,7 +49,7 @@ export default function Footer() {
           <h4>Contact</h4>
           <p>📍 Odisha, India</p>
           <p>📞 +91 78548 51486</p>
-          <p>📧 centurioyogavibes@gmail.com</p>
+          <p>📧 centurionyogavibes@gmail.com</p>
         </div>
 
       </div>
