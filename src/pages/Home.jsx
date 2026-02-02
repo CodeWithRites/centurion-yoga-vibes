@@ -1,10 +1,10 @@
 import poseImage from "../assets/images/pose.png";
-import gyana from "../assets/images/gyana.jpeg";
-import banita from "../assets/images/banita.jpeg";
+import gyana from "../assets/images/Gyana.jpeg";
+import banita from "../assets/images/Banita.jpeg";
 import priyanshu from "../assets/images/priyanshu.jpeg";
 import dwarika from "../assets/images/dwarika.jpeg";
-import ritesh from "../assets/images/ritesh.jpg";
-import bishnu from "../assets/images/bishnu.jpeg";
+import ritesh from "../assets/images/RITESH.jpg";
+import bishnu from "../assets/images/Bishnu.jpeg";
 
 export default function Home() {
   return (
