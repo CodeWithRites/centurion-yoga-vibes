@@ -60,7 +60,7 @@ export default function Navbar() {
         <span>Centurion Yoga Vibes</span>
       </div>
 
-      {/* ================= DESKTOP NAV ================= */}
+      {/* ================= DESKTOP NAV (UNCHANGED) ================= */}
       <nav className="desktop-nav">
         {isAdmin ? (
           <>
@@ -135,9 +135,10 @@ export default function Navbar() {
         <div className="hamburger" onClick={() => setMobileOpen(true)}>☰</div>
       </div>
 
-      {/* ================= MOBILE ================= */}
+      {/* ================= MOBILE BACKDROP ================= */}
       {mobileOpen && <div className="mobile-backdrop" onClick={closeMobile} />}
 
+      {/* ================= MOBILE NAV (FULL FIX) ================= */}
       <div className={`mobile-nav ${mobileOpen ? "open" : ""}`}>
         <button className="mobile-close" onClick={closeMobile}>✕</button>
 
@@ -151,6 +152,68 @@ export default function Navbar() {
           <>
             <Link to="/" onClick={closeMobile}>Home</Link>
             <Link to="/about" onClick={closeMobile}>About</Link>
+
+            {/* FIND A SOLUTION */}
+            <button
+              className="mobile-toggle"
+              onClick={() =>
+                setMobileDropdown(mobileDropdown === "solution" ? null : "solution")
+              }
+            >
+              Find a Solution ▾
+            </button>
+
+            {mobileDropdown === "solution" && (
+              <div className="mobile-sub">
+                <Link to="/stress" onClick={closeMobile}>Stress</Link>
+                <Link to="/mental-health" onClick={closeMobile}>Mental Health</Link>
+                <Link to="/weight-loss" onClick={closeMobile}>Weight Loss</Link>
+                <Link to="/depression" onClick={closeMobile}>Depression</Link>
+                <Link to="/anger" onClick={closeMobile}>Anger</Link>
+                <Link to="/sleep" onClick={closeMobile}>Sleep</Link>
+                <Link to="/wellness" onClick={closeMobile}>Wellness</Link>
+                <Link to="/backpain" onClick={closeMobile}>Back Pain</Link>
+              </div>
+            )}
+
+            {/* YOGA */}
+            <button
+              className="mobile-toggle"
+              onClick={() =>
+                setMobileDropdown(mobileDropdown === "yoga" ? null : "yoga")
+              }
+            >
+              Yoga ▾
+            </button>
+
+            {mobileDropdown === "yoga" && (
+              <div className="mobile-sub">
+                <Link to="/yoga-overview" onClick={closeMobile}>Overview</Link>
+                <Link to="/yoga-beginner" onClick={closeMobile}>Beginner</Link>
+                <Link to="/yoga-advanced" onClick={closeMobile}>Advanced</Link>
+                <Link to="/pranayama" onClick={closeMobile}>Pranayama</Link>
+              </div>
+            )}
+
+            {/* MEDITATION */}
+            <button
+              className="mobile-toggle"
+              onClick={() =>
+                setMobileDropdown(mobileDropdown === "meditation" ? null : "meditation")
+              }
+            >
+              Meditation ▾
+            </button>
+
+            {mobileDropdown === "meditation" && (
+              <div className="mobile-sub">
+                <Link to="/meditation" onClick={closeMobile}>Overview</Link>
+                <Link to="/meditation-beginner" onClick={closeMobile}>Beginner</Link>
+                <Link to="/meditation-advanced" onClick={closeMobile}>Advanced</Link>
+                <Link to="/meditation-children" onClick={closeMobile}>Children</Link>
+              </div>
+            )}
+
             <Link to="/achievements" onClick={closeMobile}>Achievements</Link>
             <Link to="/contact" onClick={closeMobile}>Contact</Link>
           </>
