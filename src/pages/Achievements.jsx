@@ -1,12 +1,19 @@
 import "../styles/Achievements.css";
 import { Link } from "react-router-dom";
 
-/* 🔒 STATIC MILESTONE IMAGES */
+/* ✅ IMAGE IMPORTS (VERY IMPORTANT) */
+import achieve1 from "../assets/images/achieve1.jpg";
+import achieve2 from "../assets/images/achieve2.jpg";
+import achieve3 from "../assets/images/achieve3.jpg";
+import achieve4 from "../assets/images/achieve4.jpg";
+import achievementHero from "../assets/images/Achievement.png";
+
+/* ✅ STATIC MILESTONE IMAGES */
 const MILESTONES = [
-  { id: 1, title: "Centurion Yoga Expo", image: "/src/assets/images/achieve1.jpg" },
-  { id: 2, title: "University Wellness Camp", image: "/src/assets/images/achieve2.jpg" },
-  { id: 3, title: "Meditation Awareness Program", image: "/src/assets/images/achieve3.jpg" },
-  { id: 4, title: "Community Yoga Drive", image: "/src/assets/images/achieve4.jpg" },
+  { id: 1, title: "Centurion Yoga Expo", image: achieve1 },
+  { id: 2, title: "University Wellness Camp", image: achieve2 },
+  { id: 3, title: "Meditation Awareness Program", image: achieve3 },
+  { id: 4, title: "Community Yoga Drive", image: achieve4 },
 ];
 
 export default function Achievements() {
@@ -16,8 +23,7 @@ export default function Achievements() {
       <section
         className="mental-hero"
         style={{
-          backgroundImage:
-            "linear-gradient(rgba(15,47,36,0.65), rgba(15,47,36,0.65)), url('/src/assets/images/Achievement.png')",
+          backgroundImage: `linear-gradient(rgba(15,47,36,0.65), rgba(15,47,36,0.65)), url(${achievementHero})`,
         }}
       >
         <div className="overlay">
