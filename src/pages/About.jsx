@@ -1,3 +1,5 @@
+import centurionLogo from "../assets/images/CenturionYoga.png";
+import cutmLogo from "../assets/images/cutm.jpg";
 export default function About() {
   return (
     <>
@@ -12,12 +14,11 @@ export default function About() {
     <p className="about-sub">Yoga for a Balanced Life</p>
 
     <div className="about-logos">
-      <img src="src/assets/images/CenturionYoga.png" alt="Centurion Yoga Vibes" />
-      <img src="src/assets/images/cutmlogo.png" alt="Centurion University" />
+      <img src={centurionLogo} alt="Centurion Yoga Vibes" />
+      <img src={cutmLogo} alt="Centurion University" />
     </div>
   </div>
 </section>
-
 
 
       {/* ABOUT CONTENT */}
