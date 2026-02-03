@@ -3,7 +3,7 @@ import { useState } from "react";
 /* ================= IMAGE IMPORTS ================= */
 import weightLossHero from "../assets/images/WeightLoss.png";
 import surya from "../assets/images/SuryaNamaskar.png";
-import trikonasana from "../assets/images/trikonasana.png";
+import trikonasana from "../assets/images/Trikonasana.png";
 import bhujangasana from "../assets/images/Bhujangasana.png";
 import kapalbhati from "../assets/images/Kapalbhati.png";
 import ardhaMatsyendrasana from "../assets/images/Ardha Matsyendrasana.png";
