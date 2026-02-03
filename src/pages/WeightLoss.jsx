@@ -1,13 +1,15 @@
 import { useState } from "react";
 
-/* ================= IMAGE IMPORTS ================= */
-import weightLossHero from "../assets/images/WeightLoss.png";
+/* ===== IMAGE IMPORTS (CRITICAL) ===== */
+import weightLossBg from "../assets/images/WeightLoss.png";
+
 import surya from "../assets/images/SuryaNamaskar.png";
 import trikonasana from "../assets/images/Trikonasana.png";
 import bhujangasana from "../assets/images/Bhujangasana.png";
 import kapalbhati from "../assets/images/Kapalbhati.png";
-import ardhaMatsyendrasana from "../assets/images/Ardha Matsyendrasana.png";
+import ardhaMatsya from "../assets/images/Ardha Matsyendrasana.png";
 import utkatasana from "../assets/images/Utkatasana.png";
+
 import healthy from "../assets/images/healthy.png";
 import sleepImg from "../assets/images/sleep.png";
 import breathwork from "../assets/images/breathwork.png";
@@ -32,7 +34,7 @@ export default function WeightLoss() {
         style={{
           backgroundImage: `
             linear-gradient(rgba(15,47,36,0.6), rgba(15,47,36,0.6)),
-            url(${weightLossHero})
+            url(${weightLossBg})
           `,
         }}
       >
@@ -83,6 +85,7 @@ export default function WeightLoss() {
         </p>
 
         <div className="video-grid">
+
           <div className="video-card" onClick={() => playVideo("1xRX1MuoImw")}>
             <img src={surya} alt="Surya Namaskar" />
             <span className="play-btn">▶</span>
@@ -108,7 +111,7 @@ export default function WeightLoss() {
           </div>
 
           <div className="video-card" onClick={() => playVideo("Qu9WBP8nUF0")}>
-            <img src={ardhaMatsyendrasana} alt="Ardha Matsyendrasana" />
+            <img src={ardhaMatsya} alt="Ardha Matsyendrasana" />
             <span className="play-btn">▶</span>
             <p>Ardha Matsyendrasana</p>
           </div>
@@ -118,6 +121,7 @@ export default function WeightLoss() {
             <span className="play-btn">▶</span>
             <p>Utkatasana</p>
           </div>
+
         </div>
       </section>
 
@@ -132,8 +136,12 @@ export default function WeightLoss() {
       {/* HOW TO ACHIEVE */}
       <section className="stress-solutions">
         <h2>How to Achieve Healthy Weight?</h2>
+        <p className="section-sub">
+          Small lifestyle changes create powerful results.
+        </p>
 
         <div className="solution-grid">
+
           <div className="solution-card food">
             <div className="icon-circle">
               <img src={healthy} alt="Healthy Diet" />
@@ -165,10 +173,11 @@ export default function WeightLoss() {
             <h3>Meditation</h3>
             <p>Reduces emotional eating and builds discipline.</p>
           </div>
+
         </div>
       </section>
 
-           {/* SUCCESS */}
+      {/* SUCCESS */}
       <section className="success-section refined">
         <div className="success-container">
           <h2 className="success-title">Fitness Begins from Within</h2>
@@ -206,8 +215,12 @@ export default function WeightLoss() {
       {/* VIDEO MODAL */}
       {videoUrl && (
         <div className="video-modal" onClick={closeVideo}>
-          <div className="video-modal-content" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="video-modal-content"
+            onClick={(e) => e.stopPropagation()}
+          >
             <button className="close-video" onClick={closeVideo}>✕</button>
+
             <iframe
               src={`https://www.youtube.com/embed/${videoUrl}?autoplay=1`}
               title="Weight Loss Video"
