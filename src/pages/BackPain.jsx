@@ -1,5 +1,16 @@
 import { useState } from "react";
 
+/* ================= IMAGE IMPORTS (DEPLOY SAFE) ================= */
+import backpainHero from "../assets/images/Backpain.png";
+import bhujangasana from "../assets/images/Bhujangasana.png";
+import catcow from "../assets/images/Cat-cow stretch.png";
+import balasana from "../assets/images/Balasana.png";
+import setuBandhasana from "../assets/images/SetuBandhasna.png";
+import healthy from "../assets/images/healthy.png";
+import sleepImg from "../assets/images/sleep.png";
+import breathwork from "../assets/images/breathwork.png";
+import meditation from "../assets/images/meditation.png";
+
 export default function Backpain() {
   const [videoUrl, setVideoUrl] = useState(null);
 
@@ -19,7 +30,7 @@ export default function Backpain() {
         style={{
           backgroundImage: `
             linear-gradient(rgba(15,47,36,0.6), rgba(15,47,36,0.6)),
-            url('src/assets/images/Backpain.png')
+            url(${backpainHero})
           `,
         }}
       >
@@ -60,41 +71,41 @@ export default function Backpain() {
         </div>
       </section>
 
-{/* WATCH VIDEOS */}
-<section className="watch-videos">
-  <h2>Watch the Related Videos for Back Pain Relief</h2>
-  <p className="section-sub">
-    Gentle yoga practices to strengthen and relax the spine.
-  </p>
+      {/* WATCH VIDEOS */}
+      <section className="watch-videos">
+        <h2>Watch the Related Videos for Back Pain Relief</h2>
+        <p className="section-sub">
+          Gentle yoga practices to strengthen and relax the spine.
+        </p>
 
-  <div className="video-grid">
+        <div className="video-grid">
 
-    <div className="video-card" onClick={() => playVideo('fOdrW7nf9gw')}>
-      <img src="src/assets/images/Bhujangasana.png" alt="Bhujangasana" />
-      <span className="play-btn">▶</span>
-      <p>Bhujangasana (Cobra Pose)</p>
-    </div>
+          <div className="video-card" onClick={() => playVideo("fOdrW7nf9gw")}>
+            <img src={bhujangasana} alt="Bhujangasana" />
+            <span className="play-btn">▶</span>
+            <p>Bhujangasana (Cobra Pose)</p>
+          </div>
 
-    <div className="video-card" onClick={() => playVideo('vuyUwtHl694')}>
-      <img src="src/assets/images/Cat-cow stretch.png" alt="Cat–Cow stretch" />
-      <span className="play-btn">▶</span>
-      <p>Cat–Cow Stretch</p>
-    </div>
+          <div className="video-card" onClick={() => playVideo("vuyUwtHl694")}>
+            <img src={catcow} alt="Cat–Cow stretch" />
+            <span className="play-btn">▶</span>
+            <p>Cat–Cow Stretch</p>
+          </div>
 
-    <div className="video-card" onClick={() => playVideo('2MJGg-dUKh0')}>
-      <img src="src/assets/images/Balasana.png" alt="Balasana" />
-      <span className="play-btn">▶</span>
-      <p>Balasana (Child’s Pose)</p>
-    </div>
+          <div className="video-card" onClick={() => playVideo("2MJGg-dUKh0")}>
+            <img src={balasana} alt="Balasana" />
+            <span className="play-btn">▶</span>
+            <p>Balasana (Child’s Pose)</p>
+          </div>
 
-    <div className="video-card" onClick={() => playVideo('hgtfNp8KywM')}>
-      <img src="src/assets/images/SetuBandhasna.png" alt="Setu Bandhasana" />
-      <span className="play-btn">▶</span>
-      <p>Setu Bandhasana (Bridge Pose)</p>
-    </div>
+          <div className="video-card" onClick={() => playVideo("hgtfNp8KywM")}>
+            <img src={setuBandhasana} alt="Setu Bandhasana" />
+            <span className="play-btn">▶</span>
+            <p>Setu Bandhasana (Bridge Pose)</p>
+          </div>
 
-  </div>
-</section>
+        </div>
+      </section>
 
       {/* QUOTE */}
       <section className="stress-quote">
@@ -115,7 +126,7 @@ export default function Backpain() {
 
           <div className="solution-card food">
             <div className="icon-circle">
-              <img src="src/assets/images/healthy.png" alt="Healthy Diet" />
+              <img src={healthy} alt="Healthy Diet" />
             </div>
             <h3>Balanced Nutrition</h3>
             <p>Supports muscle recovery and bone health.</p>
@@ -123,7 +134,7 @@ export default function Backpain() {
 
           <div className="solution-card sleep">
             <div className="icon-circle">
-              <img src="src/assets/images/sleep.png" alt="Sleep" />
+              <img src={sleepImg} alt="Sleep" />
             </div>
             <h3>Proper Sleep Posture</h3>
             <p>Allows the spine to rest and heal overnight.</p>
@@ -131,7 +142,7 @@ export default function Backpain() {
 
           <div className="solution-card breathwork">
             <div className="icon-circle">
-              <img src="src/assets/images/breathwork.png" alt="Pranayama" />
+              <img src={breathwork} alt="Pranayama" />
             </div>
             <h3>Relaxed Breathing</h3>
             <p>Reduces muscle tension and pain perception.</p>
@@ -139,7 +150,7 @@ export default function Backpain() {
 
           <div className="solution-card meditation">
             <div className="icon-circle">
-              <img src="src/assets/images/meditation.png" alt="Meditation" />
+              <img src={meditation} alt="Meditation" />
             </div>
             <h3>Meditation</h3>
             <p>Calms the nervous system and supports healing.</p>
@@ -173,22 +184,22 @@ export default function Backpain() {
 
       {/* VIDEO MODAL */}
       {videoUrl && (
-  <div className="video-modal" onClick={closeVideo}>
-    <div
-      className="video-modal-content"
-      onClick={(e) => e.stopPropagation()}
-    >
-      <button className="close-video" onClick={closeVideo}>✕</button>
+        <div className="video-modal" onClick={closeVideo}>
+          <div
+            className="video-modal-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button className="close-video" onClick={closeVideo}>✕</button>
 
-      <iframe
-        src={`https://www.youtube.com/embed/${videoUrl}?autoplay=1`}
-        title="Mental Health Video"
-        allow="autoplay; fullscreen"
-        allowFullScreen
-      />
-    </div>
-  </div>
-)}
+            <iframe
+              src={`https://www.youtube.com/embed/${videoUrl}?autoplay=1`}
+              title="Mental Health Video"
+              allow="autoplay; fullscreen"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      )}
     </>
   );
 }

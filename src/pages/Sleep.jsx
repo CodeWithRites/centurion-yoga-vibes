@@ -1,5 +1,18 @@
 import { useState } from "react";
 
+/* ================= IMAGE IMPORTS (DEPLOY SAFE) ================= */
+import sleepHero from "../assets/images/Sleep.png";
+import savasana from "../assets/images/Savasana.png";
+import suptaBaddha from "../assets/images/Supta badha Konasana.png";
+import uttanasana from "../assets/images/Uttanasana.png";
+import anulomBilom from "../assets/images/Anulom Bilom.png";
+import bhramari from "../assets/images/Bhramari.png";
+import yogaNidra from "../assets/images/Yoga Nidra.png";
+import sleepImg from "../assets/images/sleep.png";
+import breathwork from "../assets/images/breathwork.png";
+import mindfull from "../assets/images/mindfull.png";
+import meditation from "../assets/images/meditation.png";
+
 export default function Sleep() {
   const [videoUrl, setVideoUrl] = useState(null);
 
@@ -19,7 +32,7 @@ export default function Sleep() {
         style={{
           backgroundImage: `
             linear-gradient(rgba(15,47,36,0.6), rgba(15,47,36,0.6)),
-            url('src/assets/images/Sleep.png')
+            url(${sleepHero})
           `,
         }}
       >
@@ -40,59 +53,59 @@ export default function Sleep() {
         </p>
       </section>
 
-{/* WATCH VIDEOS */}
-<section className="watch-videos">
-  <h2>Yoga & Meditation for Better Sleep</h2>
-  <p className="section-sub">
-    Practices for Emotional Healing and Mental Clarity.
-  </p>
+      {/* WATCH VIDEOS */}
+      <section className="watch-videos">
+        <h2>Yoga & Meditation for Better Sleep</h2>
+        <p className="section-sub">
+          Practices for Emotional Healing and Mental Clarity.
+        </p>
 
-  <div className="video-grid">
+        <div className="video-grid">
 
-    <div className="video-card" onClick={() => playVideo('dXYtWuYxWmQ')}>
-      <img src="src/assets/images/Savasana.png" alt="Shavasana" />
-      <span className="play-btn">▶</span>
-      <p>Shavasana (Corpse Pose)</p>
-    </div>
+          <div className="video-card" onClick={() => playVideo("dXYtWuYxWmQ")}>
+            <img src={savasana} alt="Shavasana" />
+            <span className="play-btn">▶</span>
+            <p>Shavasana (Corpse Pose)</p>
+          </div>
 
-    <div className="video-card" onClick={() => playVideo('dQkBuNWxZK4')}>
-      <img src="src/assets/images/Supta badha Konasana.png" alt="Supta Baddha Konasana" />
-      <span className="play-btn">▶</span>
-      <p>Supta Baddha Konasana</p>
-    </div>
+          <div className="video-card" onClick={() => playVideo("dQkBuNWxZK4")}>
+            <img src={suptaBaddha} alt="Supta Baddha Konasana" />
+            <span className="play-btn">▶</span>
+            <p>Supta Baddha Konasana</p>
+          </div>
 
-    <div className="video-card" onClick={() => playVideo('WklJNYaayP8')}>
-      <img src="src/assets/images/Uttanasana.png" alt="Uttanasana" />
-      <span className="play-btn">▶</span>
-      <p>Uttanasana (Standing Forward Bend)</p>
-    </div>
+          <div className="video-card" onClick={() => playVideo("WklJNYaayP8")}>
+            <img src={uttanasana} alt="Uttanasana" />
+            <span className="play-btn">▶</span>
+            <p>Uttanasana (Standing Forward Bend)</p>
+          </div>
 
-    <div className="video-card" onClick={() => playVideo('blbv5UTBCGg')}>
-      <img src="src/assets/images/Anulom Bilom.png" alt="Anulom Vilom" />
-      <span className="play-btn">▶</span>
-      <p>Anulom Vilom</p>
-    </div>
+          <div className="video-card" onClick={() => playVideo("blbv5UTBCGg")}>
+            <img src={anulomBilom} alt="Anulom Vilom" />
+            <span className="play-btn">▶</span>
+            <p>Anulom Vilom</p>
+          </div>
 
-    <div className="video-card" onClick={() => playVideo('hR2ewXJIZSo')}>
-      <img src="src/assets/images/Bhramari.png" alt="Bhramari Pranayama" />
-      <span className="play-btn">▶</span>
-      <p>Bhramari Pranayama</p>
-    </div>
+          <div className="video-card" onClick={() => playVideo("hR2ewXJIZSo")}>
+            <img src={bhramari} alt="Bhramari Pranayama" />
+            <span className="play-btn">▶</span>
+            <p>Bhramari Pranayama</p>
+          </div>
 
-    <div className="video-card" onClick={() => playVideo('zpVVxgSx2lk')}>
-      <img src="src/assets/images/Yoga Nidra.png" alt="Yoga Nidra" />
-      <span className="play-btn">▶</span>
-      <p>Yoga Nidra</p>
-    </div>
+          <div className="video-card" onClick={() => playVideo("zpVVxgSx2lk")}>
+            <img src={yogaNidra} alt="Yoga Nidra" />
+            <span className="play-btn">▶</span>
+            <p>Yoga Nidra</p>
+          </div>
 
-  </div>
-</section>
+        </div>
+      </section>
 
-        {/* QUOTE */}
+      {/* QUOTE */}
       <section className="stress-quote">
         <blockquote>
           “Sleep is the golden chain that binds health and our bodies together.
-When the mind rests, the body heals, and when the body heals, life flows with ease.”<br /><br />
+          When the mind rests, the body heals, and when the body heals, life flows with ease.”<br /><br />
           <span>— Thomas Dekker</span>
         </blockquote>
       </section>
@@ -105,9 +118,10 @@ When the mind rests, the body heals, and when the body heals, life flows with ea
         </p>
 
         <div className="solution-grid">
+
           <div className="solution-card food">
             <div className="icon-circle">
-              <img src="src/assets/images/sleep.png" alt="Relaxation" />
+              <img src={sleepImg} alt="Relaxation" />
             </div>
             <h3>Mental Relaxation</h3>
             <p>
@@ -119,7 +133,7 @@ When the mind rests, the body heals, and when the body heals, life flows with ea
 
           <div className="solution-card sleep">
             <div className="icon-circle">
-              <img src="src/assets/images/breathwork.png" alt="Breathing" />
+              <img src={breathwork} alt="Breathing" />
             </div>
             <h3>Breath & Rhythm</h3>
             <p>
@@ -130,7 +144,7 @@ When the mind rests, the body heals, and when the body heals, life flows with ea
 
           <div className="solution-card breathwork">
             <div className="icon-circle">
-              <img src="src/assets/images/mindfull.png" alt="Awareness" />
+              <img src={mindfull} alt="Awareness" />
             </div>
             <h3>Body Awareness</h3>
             <p>
@@ -141,7 +155,7 @@ When the mind rests, the body heals, and when the body heals, life flows with ea
 
           <div className="solution-card meditation">
             <div className="icon-circle">
-              <img src="src/assets/images/meditation.png" alt="Meditation" />
+              <img src={meditation} alt="Meditation" />
             </div>
             <h3>Night Meditation</h3>
             <p>
@@ -149,18 +163,10 @@ When the mind rests, the body heals, and when the body heals, life flows with ea
               and trains the mind to associate bedtime with peace.
             </p>
           </div>
+
         </div>
       </section>
 
-      {/* QUOTE */}
-      <section className="stress-quote">
-        <blockquote>
-          “Sleep is the golden chain that binds health and our bodies together.
-          When the mind rests, the body heals, and life flows with ease.”
-          <br /><br />
-          <span>— Thomas Dekker</span>
-        </blockquote>
-      </section>
 
       {/* BENEFITS */}
       <section className="success-section refined">
@@ -180,24 +186,25 @@ When the mind rests, the body heals, and when the body heals, life flows with ea
           </div>
         </div>
       </section>
-{/* VIDEO MODAL */}
-      {videoUrl && (
-  <div className="video-modal" onClick={closeVideo}>
-    <div
-      className="video-modal-content"
-      onClick={(e) => e.stopPropagation()}
-    >
-      <button className="close-video" onClick={closeVideo}>✕</button>
 
-      <iframe
-        src={`https://www.youtube.com/embed/${videoUrl}?autoplay=1`}
-        title="Mental Health Video"
-        allow="autoplay; fullscreen"
-        allowFullScreen
-      />
-    </div>
-  </div>
-)}
+      {/* VIDEO MODAL */}
+      {videoUrl && (
+        <div className="video-modal" onClick={closeVideo}>
+          <div
+            className="video-modal-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button className="close-video" onClick={closeVideo}>✕</button>
+
+            <iframe
+              src={`https://www.youtube.com/embed/${videoUrl}?autoplay=1`}
+              title="Mental Health Video"
+              allow="autoplay; fullscreen"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      )}
     </>
   );
 }

@@ -1,5 +1,18 @@
 import { useState } from "react";
 
+/* ================= IMAGE IMPORTS ================= */
+import weightLossHero from "../assets/images/WeightLoss.png";
+import surya from "../assets/images/SuryaNamaskar.png";
+import trikonasana from "../assets/images/trikonasana.png";
+import bhujangasana from "../assets/images/Bhujangasana.png";
+import kapalbhati from "../assets/images/Kapalbhati.png";
+import ardhaMatsyendrasana from "../assets/images/Ardha Matsyendrasana.png";
+import utkatasana from "../assets/images/Utkatasana.png";
+import healthy from "../assets/images/healthy.png";
+import sleepImg from "../assets/images/sleep.png";
+import breathwork from "../assets/images/breathwork.png";
+import meditation from "../assets/images/meditation.png";
+
 export default function WeightLoss() {
   const [videoUrl, setVideoUrl] = useState(null);
 
@@ -19,7 +32,7 @@ export default function WeightLoss() {
         style={{
           backgroundImage: `
             linear-gradient(rgba(15,47,36,0.6), rgba(15,47,36,0.6)),
-            url('src/assets/images/WeightLoss.png')
+            url(${weightLossHero})
           `,
         }}
       >
@@ -70,43 +83,41 @@ export default function WeightLoss() {
         </p>
 
         <div className="video-grid">
-
           <div className="video-card" onClick={() => playVideo("1xRX1MuoImw")}>
-            <img src="src/assets/images/SuryaNamaskar.png" alt="Surya Namaskar" />
+            <img src={surya} alt="Surya Namaskar" />
             <span className="play-btn">▶</span>
             <p>Surya Namaskar</p>
           </div>
 
           <div className="video-card" onClick={() => playVideo("S6gB0QHbWFE")}>
-            <img src="src/assets/images/trikonasana.png" alt="Trikonasana" />
+            <img src={trikonasana} alt="Trikonasana" />
             <span className="play-btn">▶</span>
             <p>Trikonasana</p>
           </div>
 
           <div className="video-card" onClick={() => playVideo("fOdrW7nf9gw")}>
-            <img src="src/assets/images/Bhujangasana.png" alt="Bhujangasana" />
+            <img src={bhujangasana} alt="Bhujangasana" />
             <span className="play-btn">▶</span>
             <p>Bhujangasana</p>
           </div>
 
           <div className="video-card" onClick={() => playVideo("o09woNI0D3A")}>
-            <img src="src/assets/images/Kapalbhati.png" alt="Kapalbhati" />
+            <img src={kapalbhati} alt="Kapalbhati" />
             <span className="play-btn">▶</span>
             <p>Kapalbhati Pranayama</p>
           </div>
 
           <div className="video-card" onClick={() => playVideo("Qu9WBP8nUF0")}>
-            <img src="src/assets/images/Ardha Matsyendrasana.png" alt="Ardha Matsyendrasana" />
+            <img src={ardhaMatsyendrasana} alt="Ardha Matsyendrasana" />
             <span className="play-btn">▶</span>
             <p>Ardha Matsyendrasana</p>
           </div>
 
           <div className="video-card" onClick={() => playVideo("4xyTmX_OMiM")}>
-            <img src="src/assets/images/Utkatasana.png" alt="Utkatasana" />
+            <img src={utkatasana} alt="Utkatasana" />
             <span className="play-btn">▶</span>
             <p>Utkatasana</p>
           </div>
-
         </div>
       </section>
 
@@ -121,15 +132,11 @@ export default function WeightLoss() {
       {/* HOW TO ACHIEVE */}
       <section className="stress-solutions">
         <h2>How to Achieve Healthy Weight?</h2>
-        <p className="section-sub">
-          Small lifestyle changes create powerful results.
-        </p>
 
         <div className="solution-grid">
-
           <div className="solution-card food">
             <div className="icon-circle">
-              <img src="src/assets/images/healthy.png" alt="Healthy Diet" />
+              <img src={healthy} alt="Healthy Diet" />
             </div>
             <h3>Mindful Eating</h3>
             <p>Improves digestion and prevents overeating.</p>
@@ -137,7 +144,7 @@ export default function WeightLoss() {
 
           <div className="solution-card sleep">
             <div className="icon-circle">
-              <img src="src/assets/images/sleep.png" alt="Sleep" />
+              <img src={sleepImg} alt="Sleep" />
             </div>
             <h3>Quality Sleep</h3>
             <p>Regulates hormones responsible for weight balance.</p>
@@ -145,7 +152,7 @@ export default function WeightLoss() {
 
           <div className="solution-card breathwork">
             <div className="icon-circle">
-              <img src="src/assets/images/breathwork.png" alt="Pranayama" />
+              <img src={breathwork} alt="Pranayama" />
             </div>
             <h3>Pranayama</h3>
             <p>Boosts metabolism and detoxifies the body.</p>
@@ -153,16 +160,15 @@ export default function WeightLoss() {
 
           <div className="solution-card meditation">
             <div className="icon-circle">
-              <img src="src/assets/images/meditation.png" alt="Meditation" />
+              <img src={meditation} alt="Meditation" />
             </div>
             <h3>Meditation</h3>
             <p>Reduces emotional eating and builds discipline.</p>
           </div>
-
         </div>
       </section>
 
-      {/* SUCCESS */}
+           {/* SUCCESS */}
       <section className="success-section refined">
         <div className="success-container">
           <h2 className="success-title">Fitness Begins from Within</h2>
@@ -196,24 +202,21 @@ export default function WeightLoss() {
           </p>
         </div>
       </section>
-{/* VIDEO MODAL */}
-      {videoUrl && (
-  <div className="video-modal" onClick={closeVideo}>
-    <div
-      className="video-modal-content"
-      onClick={(e) => e.stopPropagation()}
-    >
-      <button className="close-video" onClick={closeVideo}>✕</button>
 
-      <iframe
-        src={`https://www.youtube.com/embed/${videoUrl}?autoplay=1`}
-        title="Mental Health Video"
-        allow="autoplay; fullscreen"
-        allowFullScreen
-      />
-    </div>
-  </div>
-)}
+      {/* VIDEO MODAL */}
+      {videoUrl && (
+        <div className="video-modal" onClick={closeVideo}>
+          <div className="video-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="close-video" onClick={closeVideo}>✕</button>
+            <iframe
+              src={`https://www.youtube.com/embed/${videoUrl}?autoplay=1`}
+              title="Weight Loss Video"
+              allow="autoplay; fullscreen"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      )}
     </>
   );
 }

@@ -1,5 +1,18 @@
 import { useState } from "react";
 
+import stressHero from "../assets/images/stress.png";
+import setuBandha from "../assets/images/SetuBandhasna.png";
+import balasana from "../assets/images/Balasana.png";
+import savasana from "../assets/images/Savasana.png";
+import sukhasana from "../assets/images/Sukhasana.png";
+import vajrasana from "../assets/images/Vajrasana.png";
+import paschimottana from "../assets/images/Paschimottanasana.png";
+
+import healthy from "../assets/images/healthy.png";
+import sleepImg from "../assets/images/sleep.png";
+import breathwork from "../assets/images/breathwork.png";
+import meditationImg from "../assets/images/meditation.png";
+
 export default function Stress() {
   const [videoUrl, setVideoUrl] = useState(null);
 
@@ -19,7 +32,7 @@ export default function Stress() {
         style={{
           backgroundImage: `
             linear-gradient(rgba(15,47,36,0.6), rgba(15,47,36,0.6)),
-            url('src/assets/images/stress.png')
+            url(${stressHero})
           `,
         }}
       >
@@ -68,37 +81,37 @@ export default function Stress() {
         <div className="video-grid">
 
           <div className="video-card" onClick={() => playVideo("hgtfNp8KywM")}>
-            <img src="src/assets/images/SetuBandhasna.png" alt="Stress Video" />
+            <img src={setuBandha} alt="Stress Video" />
             <span className="play-btn">▶</span>
             <p>Setu Bandhasana (Bridge Pose)</p>
           </div>
 
           <div className="video-card" onClick={() => playVideo("2MJGg-dUKh0")}>
-            <img src="src/assets/images/Balasana.png" alt="Stress Video" />
+            <img src={balasana} alt="Stress Video" />
             <span className="play-btn">▶</span>
             <p>Balasana (Child’s Pose)</p>
           </div>
 
           <div className="video-card" onClick={() => playVideo("dXYtWuYxWmQ")}>
-            <img src="src/assets/images/Savasana.png" alt="Stress Video" />
+            <img src={savasana} alt="Stress Video" />
             <span className="play-btn">▶</span>
             <p>Shavasana (Corpse Pose)</p>
           </div>
 
           <div className="video-card" onClick={() => playVideo("4J97THGPxoc")}>
-            <img src="src/assets/images/Sukhasana.png" alt="Stress Video" />
+            <img src={sukhasana} alt="Stress Video" />
             <span className="play-btn">▶</span>
             <p>Sukhasana (Easy Pose)</p>
           </div>
 
           <div className="video-card" onClick={() => playVideo("82p0aGNJSF4")}>
-            <img src="src/assets/images/Vajrasana.png" alt="Stress Video" />
+            <img src={vajrasana} alt="Stress Video" />
             <span className="play-btn">▶</span>
             <p>Vajrasana</p>
           </div>
 
           <div className="video-card" onClick={() => playVideo("T8sgVyF4Ux4")}>
-            <img src="src/assets/images/Paschimottanasana.png" alt="Stress Video" />
+            <img src={paschimottana} alt="Stress Video" />
             <span className="play-btn">▶</span>
             <p>Paschimottanasana (Seated Forward Bend)</p>
           </div>
@@ -126,7 +139,7 @@ export default function Stress() {
 
           <div className="solution-card food">
             <div className="icon-circle">
-              <img src="src/assets/images/healthy.png" alt="Healthy Food" />
+              <img src={healthy} alt="Healthy Food" />
             </div>
             <h3>The right amount of food</h3>
             <p>Balanced diet with enough nutrients.</p>
@@ -134,7 +147,7 @@ export default function Stress() {
 
           <div className="solution-card sleep">
             <div className="icon-circle">
-              <img src="src/assets/images/sleep.png" alt="Sleep" />
+              <img src={sleepImg} alt="Sleep" />
             </div>
             <h3>The right amount of sleep</h3>
             <p>6 – 8 hours daily.</p>
@@ -142,7 +155,7 @@ export default function Stress() {
 
           <div className="solution-card breathwork">
             <div className="icon-circle">
-              <img src="src/assets/images/breathwork.png" alt="Breathwork" />
+              <img src={breathwork} alt="Breathwork" />
             </div>
             <h3>Breathwork</h3>
             <p>Deep breathing raises energy.</p>
@@ -150,7 +163,7 @@ export default function Stress() {
 
           <div className="solution-card meditation">
             <div className="icon-circle">
-              <img src="src/assets/images/meditation.png" alt="Meditation" />
+              <img src={meditationImg} alt="Meditation" />
             </div>
             <h3>Meditation</h3>
             <p>Meditation relieves all stress.</p>
@@ -196,22 +209,22 @@ export default function Stress() {
 
       {/* VIDEO MODAL */}
       {videoUrl && (
-  <div className="video-modal" onClick={closeVideo}>
-    <div
-      className="video-modal-content"
-      onClick={(e) => e.stopPropagation()}
-    >
-      <button className="close-video" onClick={closeVideo}>✕</button>
+        <div className="video-modal" onClick={closeVideo}>
+          <div
+            className="video-modal-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button className="close-video" onClick={closeVideo}>✕</button>
 
-      <iframe
-        src={`https://www.youtube.com/embed/${videoUrl}?autoplay=1`}
-        title="Mental Health Video"
-        allow="autoplay; fullscreen"
-        allowFullScreen
-      />
-    </div>
-  </div>
-)}
+            <iframe
+              src={`https://www.youtube.com/embed/${videoUrl}?autoplay=1`}
+              title="Stress Video"
+              allow="autoplay; fullscreen"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      )}
     </>
   );
 }

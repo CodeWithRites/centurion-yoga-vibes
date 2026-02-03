@@ -1,5 +1,18 @@
 import { useState } from "react";
 
+/* ================= IMAGE IMPORTS ================= */
+import depressionHero from "../assets/images/Depression.png";
+import balasana from "../assets/images/Balasana.png";
+import sukhasana from "../assets/images/Sukhasana.png";
+import bhujangasana from "../assets/images/Bhujangasana.png";
+import setuBandhasana from "../assets/images/SetuBandhasna.png";
+import vajrasana from "../assets/images/Vajrasana.png";
+import savasana from "../assets/images/Savasana.png";
+import mindful from "../assets/images/mindfull.png";
+import sleepImg from "../assets/images/sleep.png";
+import breathwork from "../assets/images/breathwork.png";
+import meditation from "../assets/images/meditation.png";
+
 export default function Depression() {
   const [videoUrl, setVideoUrl] = useState(null);
 
@@ -19,7 +32,7 @@ export default function Depression() {
         style={{
           backgroundImage: `
             linear-gradient(rgba(15,47,36,0.6), rgba(15,47,36,0.6)),
-            url('src/assets/images/Depression.png')
+            url(${depressionHero})
           `,
         }}
       >
@@ -60,53 +73,51 @@ export default function Depression() {
         </div>
       </section>
 
-{/* WATCH VIDEOS */}
-<section className="watch-videos">
-  <h2>Watch the Related Videos for Depression</h2>
-  <p className="section-sub">
-    Practices for Emotional Healing and Mental Clarity.
-  </p>
+      {/* WATCH VIDEOS */}
+      <section className="watch-videos">
+        <h2>Watch the Related Videos for Depression</h2>
+        <p className="section-sub">
+          Practices for Emotional Healing and Mental Clarity.
+        </p>
 
-  <div className="video-grid">
+        <div className="video-grid">
+          <div className="video-card" onClick={() => playVideo("2MJGg-dUKh0")}>
+            <img src={balasana} alt="Balasana" />
+            <span className="play-btn">▶</span>
+            <p>Balasana</p>
+          </div>
 
-    <div className="video-card" onClick={() => playVideo('2MJGg-dUKh0')}>
-      <img src="src/assets/images/Balasana.png" alt="Surya Namaskar" />
-      <span className="play-btn">▶</span>
-      <p>Balasana</p>
-    </div>
+          <div className="video-card" onClick={() => playVideo("4J97THGPxoc")}>
+            <img src={sukhasana} alt="Sukhasana" />
+            <span className="play-btn">▶</span>
+            <p>Sukhasana</p>
+          </div>
 
-    <div className="video-card" onClick={() => playVideo('4J97THGPxoc')}>
-      <img src="src/assets/images/Sukhasana.png" alt="Trikonasana" />
-      <span className="play-btn">▶</span>
-      <p>Sukhasana</p>
-    </div>
+          <div className="video-card" onClick={() => playVideo("fOdrW7nf9gw")}>
+            <img src={bhujangasana} alt="Bhujangasana" />
+            <span className="play-btn">▶</span>
+            <p>Bhujangasana</p>
+          </div>
 
-    <div className="video-card" onClick={() => playVideo('fOdrW7nf9gw')}>
-      <img src="src/assets/images/Bhujangasana.png" alt="Bhujangasana" />
-      <span className="play-btn">▶</span>
-      <p>Bhujangasana</p>
-    </div>
+          <div className="video-card" onClick={() => playVideo("hgtfNp8KywM")}>
+            <img src={setuBandhasana} alt="Setu Bandhasana" />
+            <span className="play-btn">▶</span>
+            <p>Setu Bandhasana</p>
+          </div>
 
-    <div className="video-card" onClick={() => playVideo('hgtfNp8KywM')}>
-      <img src="src/assets/images/SetuBandhasna.png" alt="Kapalbhati Pranayama" />
-      <span className="play-btn">▶</span>
-      <p>Setu Bandhasana</p>
-    </div>
+          <div className="video-card" onClick={() => playVideo("82p0aGNJSF4")}>
+            <img src={vajrasana} alt="Vajrasana" />
+            <span className="play-btn">▶</span>
+            <p>Vajrasana</p>
+          </div>
 
-    <div className="video-card" onClick={() => playVideo('82p0aGNJSF4')}>
-      <img src="src/assets/images/Vajrasana.png" alt="Ardha Matsyendrasana" />
-      <span className="play-btn">▶</span>
-      <p>Vajrasana</p>
-    </div>
-
-    <div className="video-card" onClick={() => playVideo('dXYtWuYxWmQ')}>
-      <img src="src/assets/images/Savasana.png" alt="Utkatasana" />
-      <span className="play-btn">▶</span>
-      <p>Shavasana</p>
-    </div>
-
-  </div>
-</section>
+          <div className="video-card" onClick={() => playVideo("dXYtWuYxWmQ")}>
+            <img src={savasana} alt="Shavasana" />
+            <span className="play-btn">▶</span>
+            <p>Shavasana</p>
+          </div>
+        </div>
+      </section>
 
       {/* QUOTE */}
       <section className="stress-quote">
@@ -121,54 +132,45 @@ export default function Depression() {
       {/* SOLUTIONS */}
       <section className="stress-solutions">
         <h2>How to Heal from Depression Naturally?</h2>
-        <p className="section-sub">
-          Small lifestyle changes create powerful results.
-        </p>
 
         <div className="solution-grid">
-
           <div className="solution-card food">
             <div className="icon-circle">
-              <img src="src/assets/images/mindfull.png" alt="Healthy Diet" />
+              <img src={mindful} alt="Mindful Awareness" />
             </div>
             <h3>Mindful Awareness</h3>
-            <p>Practicing mindful awareness helps you observe thoughts and emotions without fear or judgment.<br />
-Instead of getting lost in negativity, you learn to gently step back, creating mental space and emotional clarity.<br />
-Over time, this awareness reduces overthinking and brings a sense of inner safety.</p>
+            <p>
+              Practicing mindful awareness helps you observe thoughts and emotions
+              without fear or judgment.
+            </p>
           </div>
 
           <div className="solution-card sleep">
             <div className="icon-circle">
-              <img src="src/assets/images/sleep.png" alt="Sleep" />
+              <img src={sleepImg} alt="Sleep" />
             </div>
             <h3>Rest & Quality Sleep</h3>
-            <p>Depression often disturbs sleep patterns, increasing mental exhaustion.<br />
-Deep and regular sleep allows the brain to repair emotional fatigue and restore balance.<br />
-A calm bedtime routine helps the mind relax and wake up with renewed energy.</p>
+            <p>Deep and regular sleep restores emotional balance.</p>
           </div>
 
           <div className="solution-card breathwork">
             <div className="icon-circle">
-              <img src="src/assets/images/breathwork.png" alt="Pranayama" />
+              <img src={breathwork} alt="Breathwork" />
             </div>
             <h3>Conscious Breathing</h3>
-            <p>Slow, deep breathing sends calming signals to the nervous system.<br />
-It reduces emotional heaviness, anxiety, and inner tension caused by prolonged stress.<br />
-Breath awareness reconnects you with the present moment, bringing stability and peace.</p>
+            <p>Calms the nervous system and uplifts emotions.</p>
           </div>
 
           <div className="solution-card meditation">
             <div className="icon-circle">
-              <img src="src/assets/images/meditation.png" alt="Meditation" />
+              <img src={meditation} alt="Meditation" />
             </div>
             <h3>Meditation</h3>
-            <p>Meditation creates a quiet space where the mind can rest and heal.<br />
-Regular practice builds emotional strength, patience, and self-acceptance.<br />
-With time, meditation replaces darkness with clarity, hope, and inner resilience.</p>
+            <p>Builds emotional strength and inner peace.</p>
           </div>
-
         </div>
       </section>
+
       {/* SUCCESS */}
       <section className="success-section refined">
         <h2 className="success-title">Healing Begins Inside</h2>
@@ -193,22 +195,18 @@ With time, meditation replaces darkness with clarity, hope, and inner resilience
 
       {/* VIDEO MODAL */}
       {videoUrl && (
-  <div className="video-modal" onClick={closeVideo}>
-    <div
-      className="video-modal-content"
-      onClick={(e) => e.stopPropagation()}
-    >
-      <button className="close-video" onClick={closeVideo}>✕</button>
-
-      <iframe
-        src={`https://www.youtube.com/embed/${videoUrl}?autoplay=1`}
-        title="Mental Health Video"
-        allow="autoplay; fullscreen"
-        allowFullScreen
-      />
-    </div>
-  </div>
-)}
+        <div className="video-modal" onClick={closeVideo}>
+          <div className="video-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="close-video" onClick={closeVideo}>✕</button>
+            <iframe
+              src={`https://www.youtube.com/embed/${videoUrl}?autoplay=1`}
+              title="Depression Video"
+              allow="autoplay; fullscreen"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      )}
     </>
   );
 }

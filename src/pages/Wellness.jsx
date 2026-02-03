@@ -1,5 +1,18 @@
 import { useState } from "react";
 
+/* ================= IMAGE IMPORTS (DEPLOY SAFE) ================= */
+import wellnessHero from "../assets/images/Wellness.png";
+import tadasana from "../assets/images/Tadasana.png";
+import suryaNamaskar from "../assets/images/SuryaNamaskar.png";
+import vrikshasana from "../assets/images/vrikhyasana.png";
+import anulomBilom from "../assets/images/Anulom Bilom.png";
+import bhramari from "../assets/images/Bhramari.png";
+import ujjayi from "../assets/images/Ujjayi.png";
+import life from "../assets/images/life.png";
+import concious from "../assets/images/concious.png";
+import breathwork from "../assets/images/breathwork.png";
+import meditation from "../assets/images/meditation.png";
+
 export default function Wellness() {
   const [videoUrl, setVideoUrl] = useState(null);
 
@@ -19,7 +32,7 @@ export default function Wellness() {
         style={{
           backgroundImage: `
             linear-gradient(rgba(15,47,36,0.6), rgba(15,47,36,0.6)),
-            url('src/assets/images/Wellness.png')
+            url(${wellnessHero})
           `,
         }}
       >
@@ -38,58 +51,55 @@ export default function Wellness() {
         </p>
       </section>
 
-      
-
       {/* WATCH VIDEOS */}
-<section className="watch-videos">
-  <h2>Yoga & Meditation for Complete Wellness</h2>
-  <p className="section-sub">
-    Practices for Emotional Healing and Mental Clarity.
-  </p>
+      <section className="watch-videos">
+        <h2>Yoga & Meditation for Complete Wellness</h2>
+        <p className="section-sub">
+          Practices for Emotional Healing and Mental Clarity.
+        </p>
 
-  <div className="video-grid">
+        <div className="video-grid">
 
-    <div className="video-card" onClick={() => playVideo('ET_cKo1Ta1s')}>
-      <img src="src/assets/images/Tadasana.png" alt="Tadasana" />
-      <span className="play-btn">▶</span>
-      <p>Tadasana (Mountain Pose)</p>
-    </div>
+          <div className="video-card" onClick={() => playVideo("ET_cKo1Ta1s")}>
+            <img src={tadasana} alt="Tadasana" />
+            <span className="play-btn">▶</span>
+            <p>Tadasana (Mountain Pose)</p>
+          </div>
 
-    <div className="video-card" onClick={() => playVideo('1xRX1MuoImw')}>
-      <img src="src/assets/images/SuryaNamaskar.png" alt="Surya Namaskar" />
-      <span className="play-btn">▶</span>
-      <p>Surya Namaskar (Sun Salutation)</p>
-    </div>
+          <div className="video-card" onClick={() => playVideo("1xRX1MuoImw")}>
+            <img src={suryaNamaskar} alt="Surya Namaskar" />
+            <span className="play-btn">▶</span>
+            <p>Surya Namaskar (Sun Salutation)</p>
+          </div>
 
-    <div className="video-card" onClick={() => playVideo('qbxrBZFBJJU')}>
-      <img src="src/assets/images/vrikhyasana.png" alt="Vrikshasana" />
-      <span className="play-btn">▶</span>
-      <p>Vrikshasana (Tree Pose)</p>
-    </div>
+          <div className="video-card" onClick={() => playVideo("qbxrBZFBJJU")}>
+            <img src={vrikshasana} alt="Vrikshasana" />
+            <span className="play-btn">▶</span>
+            <p>Vrikshasana (Tree Pose)</p>
+          </div>
 
-    <div className="video-card" onClick={() => playVideo('blbv5UTBCGg')}>
-      <img src="src/assets/images/Anulom Bilom.png" alt="Anulom Vilom" />
-      <span className="play-btn">▶</span>
-      <p>Anulom Vilom</p>
-    </div>
+          <div className="video-card" onClick={() => playVideo("blbv5UTBCGg")}>
+            <img src={anulomBilom} alt="Anulom Vilom" />
+            <span className="play-btn">▶</span>
+            <p>Anulom Vilom</p>
+          </div>
 
-    <div className="video-card" onClick={() => playVideo('hR2ewXJIZSo')}>
-      <img src="src/assets/images/Bhramari.png" alt="Bhramari Pranayama" />
-      <span className="play-btn">▶</span>
-      <p>Bhramari Pranayama</p>
-    </div>
+          <div className="video-card" onClick={() => playVideo("hR2ewXJIZSo")}>
+            <img src={bhramari} alt="Bhramari Pranayama" />
+            <span className="play-btn">▶</span>
+            <p>Bhramari Pranayama</p>
+          </div>
 
-    <div className="video-card" onClick={() => playVideo('ZwEdfOuhoY4')}>
-      <img src="src/assets/images/Ujjayi.png" alt="Ujjayi Pranayama" />
-      <span className="play-btn">▶</span>
-      <p>Ujjayi Pranayama</p>
-    </div>
+          <div className="video-card" onClick={() => playVideo("ZwEdfOuhoY4")}>
+            <img src={ujjayi} alt="Ujjayi Pranayama" />
+            <span className="play-btn">▶</span>
+            <p>Ujjayi Pranayama</p>
+          </div>
 
-  </div>
-</section>
+        </div>
+      </section>
 
-
-        {/* QUOTE */}
+      {/* QUOTE */}
       <section className="stress-quote">
         <blockquote>
           “Anger is a sign that the mind has lost its center.
@@ -109,42 +119,50 @@ export default function Wellness() {
 
           <div className="solution-card food">
             <div className="icon-circle">
-              <img src="src/assets/images/life.png" alt="Healthy Diet" />
+              <img src={life} alt="Healthy Diet" />
             </div>
             <h3>Balanced Lifestyle</h3>
-            <p>Wellness begins with harmony between work, rest, and self-care.<br />
-When life is balanced, stress reduces and energy flows freely.<br />
-Small daily adjustments create lasting physical and mental health.</p>
+            <p>
+              Wellness begins with harmony between work, rest, and self-care.<br />
+              When life is balanced, stress reduces and energy flows freely.<br />
+              Small daily adjustments create lasting physical and mental health.
+            </p>
           </div>
 
           <div className="solution-card sleep">
             <div className="icon-circle">
-              <img src="src/assets/images/concious.png" alt="Sleep" />
+              <img src={concious} alt="Conscious Living" />
             </div>
             <h3>Conscious Living</h3>
-            <p>Being present in daily activities improves mental clarity.<br />
-Conscious actions reduce stress and increase appreciation for life.<br />
-Awareness transforms routine moments into meaningful experiences</p>
+            <p>
+              Being present in daily activities improves mental clarity.<br />
+              Conscious actions reduce stress and increase appreciation for life.<br />
+              Awareness transforms routine moments into meaningful experiences
+            </p>
           </div>
 
           <div className="solution-card breathwork">
             <div className="icon-circle">
-              <img src="src/assets/images/breathwork.png" alt="Pranayama" />
+              <img src={breathwork} alt="Pranayama" />
             </div>
             <h3>Breath & Vitality</h3>
-            <p>Breath is the bridge between body and mind.<br />
-   Deep breathing improves oxygen flow, immunity, and emotional stability.<br />
-   A steady breath supports a steady life.</p>
+            <p>
+              Breath is the bridge between body and mind.<br />
+              Deep breathing improves oxygen flow, immunity, and emotional stability.<br />
+              A steady breath supports a steady life.
+            </p>
           </div>
 
           <div className="solution-card meditation">
             <div className="icon-circle">
-              <img src="src/assets/images/meditation.png" alt="Meditation" />
+              <img src={meditation} alt="Meditation" />
             </div>
             <h3>Meditation & Stillness</h3>
-            <p>Meditation aligns body, mind, and emotions.<br />
-    Stillness allows the body to heal and the mind to reset.<br />
-   From this space, true wellness naturally unfolds.</p>
+            <p>
+              Meditation aligns body, mind, and emotions.<br />
+              Stillness allows the body to heal and the mind to reset.<br />
+              From this space, true wellness naturally unfolds.
+            </p>
           </div>
 
         </div>
@@ -171,22 +189,22 @@ Awareness transforms routine moments into meaningful experiences</p>
 
       {/* VIDEO MODAL */}
       {videoUrl && (
-  <div className="video-modal" onClick={closeVideo}>
-    <div
-      className="video-modal-content"
-      onClick={(e) => e.stopPropagation()}
-    >
-      <button className="close-video" onClick={closeVideo}>✕</button>
+        <div className="video-modal" onClick={closeVideo}>
+          <div
+            className="video-modal-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button className="close-video" onClick={closeVideo}>✕</button>
 
-      <iframe
-        src={`https://www.youtube.com/embed/${videoUrl}?autoplay=1`}
-        title="Mental Health Video"
-        allow="autoplay; fullscreen"
-        allowFullScreen
-      />
-    </div>
-  </div>
-)}
+            <iframe
+              src={`https://www.youtube.com/embed/${videoUrl}?autoplay=1`}
+              title="Mental Health Video"
+              allow="autoplay; fullscreen"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      )}
     </>
   );
 }
