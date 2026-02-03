@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 /* ================= IMAGE IMPORTS (DEPLOY SAFE) ================= */
-import sleepHero from "../assets/images/Sleep.png";
+import sleepHero from "../assets/images/sleep.png";
 import savasana from "../assets/images/Savasana.png";
 import suptaBaddha from "../assets/images/Supta badha Konasana.png";
 import uttanasana from "../assets/images/Uttanasana.png";
