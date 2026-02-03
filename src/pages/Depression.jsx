@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 /* ================= IMAGE IMPORTS ================= */
-import depressionHero from "../assets/images/Depression.png";
+import depressionHero from "../assets/images/depression.png";
 import balasana from "../assets/images/Balasana.png";
 import sukhasana from "../assets/images/Sukhasana.png";
 import bhujangasana from "../assets/images/Bhujangasana.png";
