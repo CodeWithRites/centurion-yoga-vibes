@@ -1,3 +1,8 @@
+/* ================= IMAGE IMPORTS (VERCEL SAFE) ================= */
+import contactHero from "../assets/images/cutm.jpg";
+import whatsappIcon from "../assets/images/whatsapp.png";
+import gmailIcon from "../assets/images/gmail.png";
+
 export default function Contact() {
   return (
     <>
@@ -5,8 +10,10 @@ export default function Contact() {
       <section
         className="mental-hero"
         style={{
-          backgroundImage:
-            "linear-gradient(rgba(15,47,36,0.6), rgba(15,47,36,0.6)), url('src/assets/images/cutm.jpg')",
+          backgroundImage: `
+            linear-gradient(rgba(15,47,36,0.6), rgba(15,47,36,0.6)),
+            url(${contactHero})
+          `,
         }}
       >
         <div className="overlay">
@@ -92,14 +99,13 @@ export default function Contact() {
         </p>
 
         <div className="connect-icons">
-
           <a
             href="https://chat.whatsapp.com/KrJsHe12Ga5CSDD1N5az4R?mode=gi_t"
             target="_blank"
             rel="noreferrer"
             className="connect-item"
           >
-            <img src="src/assets/images/whatsapp.png" alt="WhatsApp" />
+            <img src={whatsappIcon} alt="WhatsApp" />
             <span>WhatsApp</span>
           </a>
 
@@ -107,7 +113,7 @@ export default function Contact() {
             href="mailto:jeevitam.yoga@gmail.com"
             className="connect-item"
           >
-            <img src="src/assets/images/gmail.png" alt="Gmail" />
+            <img src={gmailIcon} alt="Gmail" />
             <span>Email</span>
           </a>
         </div>
