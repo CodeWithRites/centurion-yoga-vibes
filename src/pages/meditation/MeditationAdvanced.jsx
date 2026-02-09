@@ -1,13 +1,24 @@
 import { useState } from "react";
 import "./meditation.css";
 
+/* ================= IMAGE IMPORT (VERCEL SAFE) ================= */
+import meditationAdvancedHero from "../../assets/images/Yoga.png";
+
 export default function MeditationAdvanced() {
   const [videoUrl, setVideoUrl] = useState(null);
 
   return (
     <>
       {/* HERO */}
-      <section className="mental-hero">
+      <section
+        className="mental-hero"
+        style={{
+          backgroundImage: `
+            linear-gradient(rgba(15,47,36,0.6), rgba(15,47,36,0.6)),
+            url(${meditationAdvancedHero})
+          `,
+        }}
+      >
         <div className="overlay">
           <h1>Advanced Meditation</h1>
           <p>Depth • Awareness • Inner Silence</p>
@@ -50,8 +61,6 @@ export default function MeditationAdvanced() {
           </div>
         </div>
       </section>
-
-
 
       {/* WHO */}
       <section className="section">
@@ -140,8 +149,6 @@ export default function MeditationAdvanced() {
           <div className="routine-card">🧘 <span>Stable Seated Posture</span></div>
         </div>
       </section>
-
-      
     </>
   );
 }

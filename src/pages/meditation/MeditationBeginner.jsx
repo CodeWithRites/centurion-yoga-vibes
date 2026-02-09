@@ -1,11 +1,22 @@
 import { useState } from "react";
 import "./meditation.css";
 
+/* ================= IMAGE IMPORT (VERCEL SAFE) ================= */
+import meditationBeginnerHero from "../../assets/images/Yoga.png";
+
 export default function MeditationBeginner() {
   return (
     <>
       {/* HERO */}
-      <section className="mental-hero premium-hero">
+      <section
+        className="mental-hero premium-hero"
+        style={{
+          backgroundImage: `
+            linear-gradient(rgba(15,47,36,0.6), rgba(15,47,36,0.6)),
+            url(${meditationBeginnerHero})
+          `,
+        }}
+      >
         <div className="overlay">
           <h1>🧘 Meditation for Beginners</h1>
           <p>Train Attention • Build Calm • Stay Consistent</p>
@@ -79,58 +90,38 @@ export default function MeditationBeginner() {
       </section>
 
       {/* HOW TO SIT */}
-<section className="section sit-section">
-  <h2 className="section-title">How to Sit Comfortably</h2>
+      <section className="section sit-section">
+        <h2 className="section-title">How to Sit Comfortably</h2>
 
-  <div className="sit-card">
-    <ul className="sit-list">
-      <li><span>🪑</span> Sit on chair or floor</li>
-      <li><span>🧍</span> Spine straight (not stiff)</li>
-      <li><span>🤲</span> Hands relaxed</li>
-      <li><span>👁️</span> Eyes closed or half-open</li>
-    </ul>
+        <div className="sit-card">
+          <ul className="sit-list">
+            <li><span>🪑</span> Sit on chair or floor</li>
+            <li><span>🧍</span> Spine straight (not stiff)</li>
+            <li><span>🤲</span> Hands relaxed</li>
+            <li><span>👁️</span> Eyes closed or half-open</li>
+          </ul>
 
-    <div className="sit-note">
-      Comfort <strong></strong> posture perfection
-    </div>
-  </div>
-</section>
+          <div className="sit-note">
+            Comfort <strong></strong> posture perfection
+          </div>
+        </div>
+      </section>
 
-{/* TECHNIQUE */}
-<section className="section technique-section">
-  <h2 className="section-title">Best Beginner Technique</h2>
-  <p className="tech-subtitle">Breath Awareness Meditation</p>
+      {/* TECHNIQUE */}
+      <section className="section technique-section">
+        <h2 className="section-title">Best Beginner Technique</h2>
+        <p className="tech-subtitle">Breath Awareness Meditation</p>
 
-  <div className="tech-steps">
-    <div className="tech-step">
-      <span className="step-circle">1</span>
-      <p>Close your eyes</p>
-    </div>
+        <div className="tech-steps">
+          <div className="tech-step"><span className="step-circle">1</span><p>Close your eyes</p></div>
+          <div className="tech-step"><span className="step-circle">2</span><p>Breathe normally</p></div>
+          <div className="tech-step"><span className="step-circle">3</span><p>Feel air at nose or chest</p></div>
+          <div className="tech-step"><span className="step-circle">4</span><p>Mind wanders → gently return</p></div>
+          <div className="tech-step"><span className="step-circle">5</span><p>Continue till time ends</p></div>
+        </div>
 
-    <div className="tech-step">
-      <span className="step-circle">2</span>
-      <p>Breathe normally</p>
-    </div>
-
-    <div className="tech-step">
-      <span className="step-circle">3</span>
-      <p>Feel air at nose or chest</p>
-    </div>
-
-    <div className="tech-step">
-      <span className="step-circle">4</span>
-      <p>Mind wanders → gently return</p>
-    </div>
-
-    <div className="tech-step">
-      <span className="step-circle">5</span>
-      <p>Continue till time ends</p>
-    </div>
-  </div>
-
-  <p className="tech-footer">Simple — but powerful.</p>
-</section>
-
+        <p className="tech-footer">Simple — but powerful.</p>
+      </section>
 
       {/* MISTAKES */}
       <section className="section">
@@ -162,6 +153,3 @@ export default function MeditationBeginner() {
     </>
   );
 }
-// File: src/pages/yoga/YogaBeginner.jsx
-// --- a/file:///e%3A/yoga-react/src/pages/yoga/YogaBeginner.jsx
-// +++ b/file:///e%3A/yoga-react/src/pages/yoga/YogaBeginner.jsx

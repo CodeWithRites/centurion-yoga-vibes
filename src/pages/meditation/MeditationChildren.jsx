@@ -1,13 +1,24 @@
 import { useState } from "react";
 import "./meditation.css";
 
+/* ================= IMAGE IMPORT (VERCEL SAFE) ================= */
+import kidsMeditationHero from "../../assets/images/Yoga.png";
+
 export default function MeditationChildren() {
   const [videoUrl, setVideoUrl] = useState(null);
 
   return (
     <>
       {/* HERO */}
-      <section className="mental-hero kids-hero">
+      <section
+        className="mental-hero kids-hero"
+        style={{
+          backgroundImage: `
+            linear-gradient(rgba(15,47,36,0.6), rgba(15,47,36,0.6)),
+            url(${kidsMeditationHero})
+          `,
+        }}
+      >
         <div className="overlay">
           <h1>Meditation for Children</h1>
           <p>Fun • Focus • Happy Minds</p>
@@ -136,39 +147,38 @@ export default function MeditationChildren() {
       </section>
 
       {/* PARENT GUIDE */}
-<section className="section soft-bg">
-  <h2 className="section-title">Parent Guide for Children’s Meditation</h2>
+      <section className="section soft-bg">
+        <h2 className="section-title">Parent Guide for Children’s Meditation</h2>
 
-  <div className="parent-guide-card">
-    <div className="guide-icon">📘</div>
+        <div className="parent-guide-card">
+          <div className="guide-icon">📘</div>
 
-    <div className="guide-content">
-      <h3>How Parents Can Support Meditation at Home</h3>
+          <div className="guide-content">
+            <h3>How Parents Can Support Meditation at Home</h3>
 
-      <p>
-        Children learn best when meditation is playful, gentle,
-        and pressure-free. This guide helps parents introduce
-        meditation safely and joyfully.
-      </p>
+            <p>
+              Children learn best when meditation is playful, gentle,
+              and pressure-free. This guide helps parents introduce
+              meditation safely and joyfully.
+            </p>
 
-      <ul className="guide-points">
-        <li>✔ Best age to start meditation</li>
-        <li>✔ How long children should meditate</li>
-        <li>✔ Fun breathing & imagination exercises</li>
-        <li>✔ Common mistakes parents should avoid</li>
-      </ul>
+            <ul className="guide-points">
+              <li>✔ Best age to start meditation</li>
+              <li>✔ How long children should meditate</li>
+              <li>✔ Fun breathing & imagination exercises</li>
+              <li>✔ Common mistakes parents should avoid</li>
+            </ul>
 
-      <a
-        href="/assets/pdfs/Children-Meditation-Parent-Guide.pdf"
-        download
-        className="btn primary"
-      >
-        Download Parent Guide (PDF)
-      </a>
-    </div>
-  </div>
-</section>
-
+            <a
+              href="/assets/pdfs/Children-Meditation-Parent-Guide.pdf"
+              download
+              className="btn primary"
+            >
+              Download Parent Guide (PDF)
+            </a>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

@@ -1,11 +1,22 @@
 import { Link } from "react-router-dom";
 import "./meditation.css";
 
+/* ================= IMAGE IMPORT (VERCEL SAFE) ================= */
+import meditationHero from "../../assets/images/Yoga.png";
+
 export default function MeditationOverview() {
   return (
     <>
       {/* HERO */}
-      <section className="mental-hero">
+      <section
+        className="mental-hero"
+        style={{
+          backgroundImage: `
+            linear-gradient(rgba(15,47,36,0.6), rgba(15,47,36,0.6)),
+            url(${meditationHero})
+          `,
+        }}
+      >
         <div className="overlay">
           <h1>Meditation Programs</h1>
           <p>Begin • Deepen • Grow — at Your Own Pace</p>
