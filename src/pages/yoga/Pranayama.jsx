@@ -1,6 +1,13 @@
 import { useState } from "react";
 import "./yoga.css";
 
+/* ================= IMAGE IMPORTS (VERCEL SAFE) ================= */
+import pranayamaHero from "../../assets/images/Yoga4.png";
+import anulomVilom from "../../assets/images/Anulom Bilom.png";
+import bhramari from "../../assets/images/Bhramari.png";
+import kapalbhati from "../../assets/images/Kapalbhati.png";
+import ujjayi from "../../assets/images/Ujjayi.png";
+
 export default function Pranayama() {
   const [videoUrl, setVideoUrl] = useState(null);
 
@@ -13,13 +20,15 @@ export default function Pranayama() {
   return (
     <>
       {/* HERO */}
-      <section className="mental-hero"
+      <section
+        className="mental-hero"
         style={{
           backgroundImage: `
             linear-gradient(rgba(15,47,36,0.6), rgba(15,47,36,0.6)),
-            url('src/assets/images/Yoga4.png')
+            url(${pranayamaHero})
           `,
-        }}>
+        }}
+      >
         <div className="overlay">
           <h1>Pranayama</h1>
           <p>Breath • Balance • Vital Energy</p>
@@ -65,28 +74,28 @@ export default function Pranayama() {
         <div className="yoga-video-grid">
 
           <div className="yoga-video-card">
-            <img src="src/assets/images/Anulom Bilom.png" alt="Anulom Vilom" className="yoga-video-img" />
+            <img src={anulomVilom} alt="Anulom Vilom" className="yoga-video-img" />
             <h5>Anulom Vilom</h5>
             <p>Balances left and right brain.</p>
             <button onClick={() => playVideo("blbv5UTBCGg")}>▶ Watch Practice</button>
           </div>
 
           <div className="yoga-video-card">
-            <img src="src/assets/images/Bhramari.png" alt="Bhramari" className="yoga-video-img" />
+            <img src={bhramari} alt="Bhramari" className="yoga-video-img" />
             <h5>Bhramari Pranayama</h5>
             <p>Instant stress relief.</p>
             <button onClick={() => playVideo("hR2ewXJIZSo")}>▶ Watch Practice</button>
           </div>
 
           <div className="yoga-video-card">
-            <img src="src/assets/images/Kapalbhati.png" alt="Kapalbhati" className="yoga-video-img" />
+            <img src={kapalbhati} alt="Kapalbhati" className="yoga-video-img" />
             <h5>Kapalbhati</h5>
             <p>Boosts digestion and metabolism.</p>
             <button onClick={() => playVideo("WOw55qnKBSo")}>▶ Watch Practice</button>
           </div>
 
           <div className="yoga-video-card">
-            <img src="src/assets/images/Ujjayi.png" alt="Ujjayi" className="yoga-video-img" />
+            <img src={ujjayi} alt="Ujjayi" className="yoga-video-img" />
             <h5>Ujjayi Pranayama</h5>
             <p>Improves focus and breath awareness.</p>
             <button onClick={() => playVideo("ZwEdfOuhoY4")}>▶ Watch Practice</button>
@@ -101,7 +110,6 @@ export default function Pranayama() {
         <p>
           Breath is the bridge between body and mind.
         </p>
-
       </section>
 
       {/* VIDEO MODAL */}

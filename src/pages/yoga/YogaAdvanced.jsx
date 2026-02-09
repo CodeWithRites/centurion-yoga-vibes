@@ -1,6 +1,13 @@
 import { useState } from "react";
 import "./yoga.css";
 
+/* ================= IMAGE IMPORTS (VERCEL SAFE) ================= */
+import yogaHero from "../../assets/images/Yoga3.png";
+import bakasana from "../../assets/images/Bakasana.jpg";
+import sirsasana from "../../assets/images/Sirsasana.jpg";
+import dhanurasana from "../../assets/images/Dhanurasana.jpeg";
+import chakrasana from "../../assets/images/Chakrasana.webp";
+
 export default function YogaAdvanced() {
   const [videoUrl, setVideoUrl] = useState(null);
 
@@ -13,13 +20,15 @@ export default function YogaAdvanced() {
   return (
     <>
       {/* HERO */}
-      <section  className="mental-hero"
+      <section
+        className="mental-hero"
         style={{
           backgroundImage: `
             linear-gradient(rgba(15,47,36,0.6), rgba(15,47,36,0.6)),
-            url('src/assets/images/Yoga3.png')
+            url(${yogaHero})
           `,
-        }}>
+        }}
+      >
         <div className="overlay">
           <h1>Advanced Yoga</h1>
           <p>Strength • Control • Inner Mastery</p>
@@ -65,28 +74,28 @@ export default function YogaAdvanced() {
         <div className="yoga-video-grid">
 
           <div className="yoga-video-card">
-            <img src="src/assets/images/Bakasana.jpg" alt="Bakasana" className="yoga-video-img" />
+            <img src={bakasana} alt="Bakasana" className="yoga-video-img" />
             <h5>Bakasana (Crow Pose)</h5>
             <p>Builds arm strength and balance.</p>
             <button onClick={() => playVideo("wSm_yx6DkEU")}>▶ Watch Practice</button>
           </div>
 
           <div className="yoga-video-card">
-            <img src="src/assets/images/Sirsasana.jpg" alt="Sirsasana" className="yoga-video-img" />
+            <img src={sirsasana} alt="Sirsasana" className="yoga-video-img" />
             <h5>Sirsasana (Headstand)</h5>
             <p>Improves circulation and mental clarity.</p>
             <button onClick={() => playVideo("vqP5HTsKen4")}>▶ Watch Practice</button>
           </div>
 
           <div className="yoga-video-card">
-            <img src="src/assets/images/Dhanurasana.jpeg" alt="Dhanurasana" className="yoga-video-img" />
+            <img src={dhanurasana} alt="Dhanurasana" className="yoga-video-img" />
             <h5>Dhanurasana (Bow Pose)</h5>
             <p>Strengthens spine and opens chest.</p>
             <button onClick={() => playVideo("xm00XMmBbto")}>▶ Watch Practice</button>
           </div>
 
           <div className="yoga-video-card">
-            <img src="src/assets/images/Chakrasana.webp" alt="Chakrasana" className="yoga-video-img" />
+            <img src={chakrasana} alt="Chakrasana" className="yoga-video-img" />
             <h5>Chakrasana (Wheel Pose)</h5>
             <p>Enhances flexibility and nervous energy.</p>
             <button onClick={() => playVideo("ho2QdRsro00")}>▶ Watch Practice</button>
@@ -95,7 +104,7 @@ export default function YogaAdvanced() {
         </div>
       </section>
 
-       {/* HOW TO PRACTICE */}
+      {/* HOW TO PRACTICE */}
       <section className="section">
         <h2>How to Practice (Simple Steps)</h2>
 
