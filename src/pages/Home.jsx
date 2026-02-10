@@ -78,7 +78,7 @@ export default function Home() {
 
         <div className="team-grid">
           <TeamCard name="Gyanendra Kumar Mishra" role="Yoga Trainer" image={gyana} />
-          <TeamCard name="Banita Sahoo" role="Assistant Yoga Trainer" image={banita} />
+          <TeamCard name="Banita Das" role="Assistant Yoga Trainer" image={banita} />
           <TeamCard name="Priyanshu Pradhan" role="Assistant Yoga Trainer" image={priyanshu} />
           <TeamCard name="Dwarikanath Satpathy" role="Assistant Yoga Trainer" image={dwarika} />
           <TeamCard name="Ritesh Gouda" role="Media & IT Department" image={ritesh} />
