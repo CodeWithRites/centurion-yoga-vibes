@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import { db } from "../firebase";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import "./Login.css";
 
 const ADMIN_EMAIL = "admin@centurionyogavibes.com";
@@ -30,32 +32,43 @@ export default function Login() {
 
     try {
       setLoading(true);
-      await adminLogin(email, password);
+      const user = await adminLogin(email, password);
+
+      // 🔥 STORE ADMIN LOGIN HISTORY
+      await addDoc(collection(db, "loginHistory"), {
+        uid: user.uid,
+        email: user.email,
+        role: "admin",
+        loginTime: serverTimestamp(),
+      });
+
       navigate("/admin");
     } catch (err) {
       console.error("ADMIN LOGIN ERROR:", err);
-
-      if (err.code === "auth/user-not-found") {
-        alert("❌ Admin user not found");
-      } else if (err.code === "auth/wrong-password") {
-        alert("❌ Wrong password");
-      } else if (err.code === "auth/operation-not-allowed") {
-        alert("❌ Email/Password auth disabled in Firebase");
-      } else {
-        alert(err.message);
-      }
+      alert(err.message);
     } finally {
       setLoading(false);
     }
   };
 
   /* =========================
-     GOOGLE LOGIN
+     GOOGLE USER LOGIN
   ========================= */
   const handleGoogleLogin = async () => {
     try {
       setLoading(true);
-      await userGoogleLogin();
+
+      const userCredential = await userGoogleLogin();
+      const user = userCredential.user;
+
+      // 🔥 STORE USER LOGIN HISTORY
+      await addDoc(collection(db, "loginHistory"), {
+        uid: user.uid,
+        email: user.email,
+        role: "user",
+        loginTime: serverTimestamp(),
+      });
+
       navigate("/");
     } catch (err) {
       console.error("GOOGLE LOGIN ERROR:", err);
@@ -69,11 +82,9 @@ export default function Login() {
     <div className="login-overlay">
       <div className="login-modal">
 
-        {/* ❌ CLOSE BUTTON */}
         <button
           className="close-btn"
           onClick={() => navigate("/")}
-          aria-label="Close login"
         >
           ✕
         </button>
@@ -87,7 +98,6 @@ export default function Login() {
             : "Login to continue your wellness journey"}
         </p>
 
-        {/* ================= ADMIN MODE ================= */}
         {adminMode && (
           <>
             <input
@@ -114,7 +124,6 @@ export default function Login() {
           </>
         )}
 
-        {/* ================= USER MODE ================= */}
         {!adminMode && (
           <button
             className="google-btn"
